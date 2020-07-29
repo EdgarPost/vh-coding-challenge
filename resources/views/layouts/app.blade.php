@@ -1,11 +1,18 @@
 <html>
-    <head>
-        <title>Vegan Hacktivist Coding Challenge - @yield('title')</title>
-    </head>
-    <body>    
-      <div class="container">
-          <h1>@yield('title')</h1>
-            @yield('content')
+  <head>
+    <title>Vegan Hacktivist Coding Challenge - @yield('title')</title>
+  </head>
+  <body>    
+    <div class="container">
+      <h1>@yield('title')</h1>
+
+      @if (session('status'))
+        <div>
+          {{ session('status') }}
         </div>
-    </body>
+      @endif
+
+      @yield('content')
+    </div>
+  </body>
 </html>

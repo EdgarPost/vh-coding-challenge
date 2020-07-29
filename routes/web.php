@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'QuestionOverviewController')->name('questions');
 Route::get('/{id}/{slug}', 'QuestionDetailController')->name('question');
-Route::post('/questions', 'QuestionCreateController')->name('postQuestion');
+Route::post('/ask-question', 'QuestionCreateController')->name('postQuestion');
+Route::post('/answer-question/{id}', 'AnswerCreateController')->name('postAnswer');
