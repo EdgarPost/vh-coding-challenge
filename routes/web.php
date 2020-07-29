@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'QuestionOverviewController')->name('questions');
+Route::get('/{id}/{slug}', 'QuestionDetailController')->name('question');
