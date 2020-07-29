@@ -3,6 +3,7 @@
 @section('title', 'Questions')
 
 @section('content')
+  <x-question-form />
   <ol>
     @foreach ($questions as $question)
       <li>

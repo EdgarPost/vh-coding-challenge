@@ -16,6 +16,7 @@ class QuestionOverviewController extends Controller
   {
     $questions = Question::withCount('answers')->get();
 
+
     return view('question.overview', [
       'questions' => $questions
     ]);

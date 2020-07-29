@@ -4,7 +4,7 @@
 
 @section('content')
   @if (count($question->answers) === 0)
-      <p>There are not answers yet, will you be the first?</p>
+      <p>There are no answers yet.</p>
   @else
   <ol>
     @foreach ($question->answers as $answer)

@@ -8,7 +8,7 @@ use App\Question;
 class QuestionDetailController extends Controller
 {
   /**
-   * Show the Questions Overview
+   * Show the Questions Detail
    *
    * @return View
    */
