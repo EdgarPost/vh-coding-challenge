@@ -3,6 +3,11 @@
 @section('title', $question->body)
 
 @section('content')
+
+  <a href="{{ route('questions', [], false) }}">
+    Back to the list
+  </a>
+
   @if (count($question->answers) === 0)
       <p>There are no answers yet.</p>
   @else
