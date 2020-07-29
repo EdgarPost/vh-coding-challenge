@@ -1,10 +1,15 @@
-<h1>Questions</h1>
+@extends('layouts.app')
 
-<ol>
-  @foreach ($questions as $question)
-    <li>
-      <a href="{{ route('question', ['id' => $question->id, 'slug' => $question->slug], false) }}">
-        {{ $question->body }} ({{ $question->answers_count }})</li>
-      </a>
-  @endforeach
-</ol>
+@section('title', 'Questions')
+
+@section('content')
+  <ol>
+    @foreach ($questions as $question)
+      <li>
+        <a href="{{ route('question', ['id' => $question->id, 'slug' => $question->slug], false) }}">
+          {{ $question->body }} ({{ $question->answers_count }})
+        </a>
+      </li>
+    @endforeach
+  </ol>
+@endsection

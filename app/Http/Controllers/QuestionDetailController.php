@@ -17,7 +17,7 @@ class QuestionDetailController extends Controller
     $question = Question::find($id);
 
     if (!$question) {
-      return view('question.notFound');
+      abort(404);
     }
 
     return view('question.detail', [
