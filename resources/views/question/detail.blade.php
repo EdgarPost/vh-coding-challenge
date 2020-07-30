@@ -8,10 +8,11 @@
     Back to the list
   </a>
 
-  @if (count($question->answers) === 0)
-      <p>There are no answers yet.</p>
-  @else
   <x-answer-form :questionId="$question->id" />
+
+  @if (count($question->answers) === 0)
+    <p>There are no answers yet.</p>
+  @else
   <ol>
     @foreach ($question->answers as $answer)
       <li>{{ $answer->body }}</li>

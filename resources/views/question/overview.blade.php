@@ -4,9 +4,9 @@
 
 @section('content')
   <x-question-form />
-  <ol>
+  <ol class="list-group py-5">
     @foreach ($questions as $question)
-      <li>
+      <li class="list-group-item">
         <a href="{{ route('question', ['id' => $question->id, 'slug' => $question->slug], false) }}">
           {{ $question->body }} ({{ $question->answers_count }})
         </a>

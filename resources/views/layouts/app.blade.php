@@ -9,7 +9,9 @@
   </head>
   <body>    
     <div class="container">
-      <h1>@yield('title')</h1>
+      <div class="py-5 text-center">
+        <h1>@yield('title')</h1>
+      </div>
 
       @if (session('status'))
         <div>
