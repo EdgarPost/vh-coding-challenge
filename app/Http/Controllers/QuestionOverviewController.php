@@ -14,8 +14,9 @@ class QuestionOverviewController extends Controller
    */
   public function __invoke()
   {
-    $questions = Question::withCount('answers')->get();
-
+    $questions = Question::withCount('answers')
+      ->orderBy('created_at', 'desc')
+      ->get();
 
     return view('question.overview', [
       'questions' => $questions
