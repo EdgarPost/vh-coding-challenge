@@ -9,7 +9,7 @@ use Illuminate\View\Component;
 class AnswerForm extends Component
 {
     public $questionId;
-    
+
     public $body;
 
     /**
@@ -20,7 +20,7 @@ class AnswerForm extends Component
     public function __construct(Request $request, $questionId)
     {
         $this->questionId = $questionId;
-        
+
         $this->body = $request->session()->pull('_old_input.body');
     }
 

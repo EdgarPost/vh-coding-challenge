@@ -28,7 +28,8 @@ class Question extends Model
     /**
      * Dynamically generate slug for nicer urls
      */
-    public function getSlugAttribute(){
+    public function getSlugAttribute()
+    {
         return Str::of($this->body)->slug('-');
     }
 }

@@ -15,13 +15,13 @@ class AnswerCreateController extends Controller
    * @return View
    */
   public function __invoke(StoreAnswer $request)
-  { 
+  {
     $validated = $request->validated();
 
     $question = Question::find($request->id);
-    
+
     if (!$question) {
-      abort(404);  
+      abort(404);
     }
 
     $question->answers()->create($validated);
@@ -29,6 +29,5 @@ class AnswerCreateController extends Controller
     $request->session()->flash('status', 'Your answer was posted!');
 
     return redirect()->route('question', ['id' => $question->id, 'slug' => $question->slug]);
-    
   }
 }
